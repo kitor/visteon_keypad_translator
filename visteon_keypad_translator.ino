@@ -32,10 +32,13 @@ const int INP_ROW_7  =  14; //PB3
 const int INP_ROW_16 =  16; //PB2
 const int INP_ROW_18 =  15; //PB1 
 
+/* Keytable for each "keycode" (explained later) contains translated "keycode".
+ * You can think of them as bit numbers in internal keymap representation.
+ */
 //front BRAVO, back STILO
 const uint8_t KEYTABLE[20] = { 10, 14, 1, 15, 4, 13, 5, 6, 12, 9, 0, 11, 8, 2, 18, 3, 7, 16, 17, 19 };
-//TODO: front STILO, back BRAVO
-//const uint8_t KEYTABLE[20] = { );
+//front STILO, back BRAVO - inversion of above ( BRAVO[x] = y; STILO[y] = x )
+//const uint8_t KEYTABLE[20] = { 10, 2, 13, 15, 4, 6, 7, 16, 12, 9, 0, 11, 8, 5, 1, 3, 17, 18, 14, 19 );
 
 void setup()
 {
